@@ -11,7 +11,7 @@
       name: apache2
       enabled: yes
 
-  - name: Download  and extract template below
+  - name: Download and extract template below
     unarchive:
       src: https://www.free-css.com/assets/files/free-css-templates/download/page285/evonyee.zip
       dest: /var/www/
