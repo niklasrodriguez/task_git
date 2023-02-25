@@ -16,3 +16,9 @@
       src: https://www.free-css.com/assets/files/free-css-templates/download/page285/evonyee.zip
       dest: /var/www/
       remote_src: yes
+
+  - name: Copy CSS template files into /html
+    copy:
+      src: /var/www/evonyee/
+      dest: /var/www/html
+      remote_src: yes
