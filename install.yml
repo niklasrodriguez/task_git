@@ -1,11 +1,18 @@
 - hosts: task
   tasks:
-  - name: Install httpd
+  - name: Install apache2 and unzip
     apt:
-      name: apache2
+      name: apache2, unzip
       state: latest
  
   - name: Make sure a service is running
     systemd:
       state: started
-      name: apache2 
+      name: apache2
+      enabled: yes
+
+  - name: Download  and extract template below
+    unarchive:
+      src: https://www.free-css.com/assets/files/free-css-templates/download/page285/evonyee.zip
+      dest: /var/www/
+      remote_src: yes
