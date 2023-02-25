@@ -5,3 +5,7 @@
       name: apache2
       state: latest
  
+  - name: Make sure a service is running
+    systemd:
+      state: started
+      name: apache2 
